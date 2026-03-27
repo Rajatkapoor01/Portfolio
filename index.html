@@ -1,357 +1,236 @@
 <!DOCTYPE html>
 <html lang="en">
-    <head>
-        <meta charset="UTF-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Rajat Kapoor | Data Scientist</title>
 
-        <link rel="stylesheet" href="assets/css/styles.css">
+<link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" rel="stylesheet">
 
-        <!-- =====BOX ICONS===== -->
-        <link href='https://cdn.jsdelivr.net/npm/boxicons@2.0.5/css/boxicons.min.css' rel='stylesheet'>
-        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+<style>
+*{margin:0;padding:0;box-sizing:border-box;font-family:Segoe UI,sans-serif}
+body{background:#0b0f1a;color:#fff;overflow-x:hidden}
 
-        <title>Portfolio website complete</title>
-    </head>
-    <body>
-        <!--===== HEADER =====-->
-        <header class="l-header">
-            <nav class="nav bd-grid">
-                <div>
-                    <a href="#" class="nav__logo">Rajat kapoor</a>
-                </div>
+/* CURSOR */
+.cursor{
+ position:fixed;width:20px;height:20px;border:2px solid #00f5ff;
+ border-radius:50%;pointer-events:none;transition:.15s;
+ z-index:9999
+}
 
-                <div class="nav__menu" id="nav-menu">
-                    <ul class="nav__list">
-                        <li class="nav__item"><a href="#home" class="nav__link active-link">Home</a></li>
-                        <li class="nav__item"><a href="#about" class="nav__link">About</a></li>
-                        <li class="nav__item"><a href="#work-experience" class="nav__link">Work Experience</a></li>
-                        <li class="nav__item"><a href="#work" class="nav__link">Projects</a></li>
-                        <li class="nav__item"><a href="#skills" class="nav__link">Skills</a></li>
-                        <li class="nav__item"><a href="#footer" class="nav__link">Contact</a></li>
-                        <li class="nav__item"><a href="Rajat01kapoor.pdf" download class="nav__link">CV</a></li>
-                    </ul>
-                </div>
-                <div class="nav__toggle" id="nav-toggle">
-                    <i class='bx bx-menu'></i>
-                </div>
-            </nav>
-        </header>
+/* NAV */
+header{
+ position:fixed;width:100%;top:0;
+ display:flex;justify-content:space-between;
+ padding:20px 60px;
+ background:rgba(0,0,0,0.6);
+ backdrop-filter:blur(10px);
+ z-index:1000
+}
+header a{
+ color:#aaa;margin:0 15px;text-decoration:none;transition:.3s
+}
+header a:hover{color:#00f5ff}
 
-        <main class="l-main">
-            <!--===== HOME =====-->
-            <section class="home bd-grid" id="home">
-                <div class="home__data">
-                    <h1 class="home__title">Hi,<br>I'm <span class="home__title-color">Rajat Kapoor</span><br> Data Analyst</h1>
-                    <!-- CV Download Button -->
-                    <a href="Rajat01kapoor.pdf" class="button" download="Rajat_kapoor_CV">Download CV</a>
-                    <!-- <a href="#" class="button">Contact</a> -->
-                </div>
+/* SECTIONS */
+section{padding:100px 60px}
 
-                <div class="home__social">
-                    <a href="https://www.linkedin.com/in/rajat-kapoor-732042289" class="home__social-icon"><i class='bx bxl-linkedin'></i></a>
-                    
-                    </a>
-                    <a href="https://github.com/Rajatkapoor01" class="home__social-icon"><i class='bx bxl-github' ></i></a>
-                    <a href="mailto:rajat01kapoor@gmail.com" class="home__social-icon" title="Email Rajat Kapoor">
-                        <i class='bx bx-envelope'></i></a>
-                    <a href="tel:+91 #########" class="home__social-icon" title="Call Rajat Kapoor">
-                        <i class='bx bx-phone'></i></a>
-                </div>
+/* HERO */
+.home{
+ height:100vh;display:flex;
+ justify-content:space-between;align-items:center
+}
+.home h1{font-size:55px;line-height:1.2}
+.home span{color:#00f5ff}
 
-                <div class="home__img">
-                    <svg class="home__blob" viewBox="0 0 479 467" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
-                        <mask id="mask0" mask-type="alpha">
-                            <path d="M9.19024 145.964C34.0253 76.5814 114.865 54.7299 184.111 29.4823C245.804 6.98884 311.86 -14.9503 370.735 14.143C431.207 44.026 467.948 107.508 477.191 174.311C485.897 237.229 454.931 294.377 416.506 344.954C373.74 401.245 326.068 462.801 255.442 466.189C179.416 469.835 111.552 422.137 65.1576 361.805C17.4835 299.81 -17.1617 219.583 9.19024 145.964Z"/>
-                        </mask>
-                        <g mask="url(#mask0)">
-                            <path d="M9.19024 145.964C34.0253 76.5814 114.865 54.7299 184.111 29.4823C245.804 6.98884 311.86 -14.9503 370.735 14.143C431.207 44.026 467.948 107.508 477.191 174.311C485.897 237.229 454.931 294.377 416.506 344.954C373.74 401.245 326.068 462.801 255.442 466.189C179.416 469.835 111.552 422.137 65.1576 361.805C17.4835 299.81 -17.1617 219.583 9.19024 145.964Z"/>
-                            <image class="home__blob-img" x="50" y="10" href="assets/img/photoXx.png"/>
-                        </g>
-                    </svg>
-                </div>
-            </section>
+/* BUTTON */
+.btn{
+ padding:12px 25px;
+ background:linear-gradient(45deg,#00f5ff,#0066ff);
+ border-radius:30px;color:#000;
+ text-decoration:none;display:inline-block;
+ margin-top:20px;
+ transition:.3s
+}
+.btn:hover{transform:scale(1.1)}
 
-            <!--===== ABOUT =====-->
-            <section class="about section " id="about">=
-                <h2 class="section-title">About</h2>
+/* GRID */
+.grid{
+ display:grid;
+ grid-template-columns:repeat(auto-fit,minmax(300px,1fr));
+ gap:25px;margin-top:30px
+}
 
-                <div class="about__container bd-grid">
-                    <div class="about__img">
-                        <img src="assets/img/Profile 3.jpg" alt="" style="width: 500px; height: auto;">
-                    </div>
-                    
-                    <div>
-                        <h2 class="about__subtitle">I am Rajat Kapoor</h2>
-                        <p class="about__text">A Student of Data Science with a strong foundation in Machine Learning, Deep Learning & Natural Language Processing specializing in using data-driven insights to solve complex business challenges. Proficient in Python (TensorFlow, PyTorch, Scikit-learn, flask) and data analysis libraries (Pandas, NumPy, Matplotlib, Seaborn), with additional experience in tools like Tableau and Advance Excel along with this Skilled in SQL for database management and integration for impactful reporting and managing.</p>           
-                    </div>                                   
-                </div>
-            </section>
+/* CARD */
+.card{
+ background:rgba(255,255,255,0.05);
+ border-radius:15px;padding:25px;
+ transition:.4s;position:relative;
+ overflow:hidden
+}
+.card:hover{
+ transform:translateY(-10px) scale(1.03)
+}
+.card::before{
+ content:"";position:absolute;
+ width:100%;height:100%;
+ top:0;left:-100%;
+ background:linear-gradient(120deg,transparent,#00f5ff,transparent);
+ transition:.5s
+}
+.card:hover::before{left:100%}
 
-            <!--===== VIRTUAL EXPERIENCE =====-->
-            <section class="work-experience section" id="work-experience">
-                <h2 class="section-title">Virtual Internship</h2>
+/* PROJECT */
+.project h3{color:#00f5ff}
+.project p{color:#ccc;font-size:14px;margin:10px 0}
+.project strong{color:#fff}
 
-                <div class="work-experience__container bd-grid">
-                    <div class="work-experience__item">
-                        <h3 class="work-experience__job-title">CodeClause - Data Science Intern</h3>
-                        <p class="work-experience__date">07/24 – 08/24</p>
-                        <ul class="work-experience__responsibilities">
-                            <li>Completed projects on fraud transaction prediction and plant disease detection using machine learning techniques, achieving high accuracy in predictions.</li>
-                            <li>Developed and implemented supervised learning models for real-world datasets, enhancing data-driven decision-making processes.</li>
-                            <li>Created a professional report outlining key insights and actionable recommendations based on the analysis performed.</li>
-                        </ul>
-                    </div>
-                
-                    <div class="work-experience__item">
-                        <h3 class="work-experience__job-title">YBI Foundation - Data Science Intern</h3>
-                        <p class="work-experience__date">06/24 – 07/24</p>
-                        <ul class="work-experience__responsibilities">
-                            <li>Built machine learning models for bank churn prediction, mileage prediction, and a movie recommendation system.</li>
-                            <li>Enhanced understanding of machine learning workflows by performing exploratory data analysis and feature engineering.</li>
-                            <li>Participated in hands-on projects on Kaggle, gaining practical exposure to data science challenges.</li>
-                        </ul>
-                    </div>
-                
-                    <div class="work-experience__item">
-                        <h3 class="work-experience__job-title">CodeSoft - Data Science Intern</h3>
-                        <p class="work-experience__date">08/24 – 09/24</p>
-                        <ul class="work-experience__responsibilities">
-                            <li>Developed a project on credit card fraud detection, employing classification models to identify fraudulent transactions with high precision.</li>
-                            <li>Designed a plant disease detection system using deep learning frameworks, assisting in early detection and prevention strategies.</li>
-                            <li>Collaborated with a team to fine-tune models and deliver deployable solutions tailored to client needs.</li>
-                        </ul>
-                    </div>
-                
-                    <div class="work-experience__item">
-                        <h3 class="work-experience__job-title">VCodesoft - Data Science Intern</h3>
-                        <p class="work-experience__date">07/24 – 08/24</p>
-                        <ul class="work-experience__responsibilities">
-                            <li>Worked on a credit card fraud detection project, leveraging machine learning algorithms to achieve optimal performance.</li>
-                            <li>Performed extensive data preprocessing and visualization to identify key patterns in transaction datasets.</li>
-                            <li>Presented project findings and methodologies to mentors, receiving constructive feedback for continuous improvement.</li>
-                        </ul>
-                    </div>
-                
-                    <div class="work-experience__item">
-                        <h3 class="work-experience__job-title">Google Foundation Project</h3>
-                        <p class="work-experience__date">10/24</p>
-                        <ul class="work-experience__responsibilities">
-                            <li>Worked on data analysis and visualization projects, gaining practical experience in data-driven insights generation.</li>
-                            <li>Applied analytical techniques to uncover trends and patterns, producing impactful visualizations for stakeholders.</li>
-                        </ul>
-                    </div>
-                </div>
-                
-            </section>
-        
+/* TAGS */
+.tags span{
+ background:#00f5ff;color:#000;
+ padding:5px 10px;border-radius:20px;
+ margin:5px;font-size:12px
+}
 
-            <!--===== WORK =====-->
-            <section class="work section" id="work">
-                <h2 class="section-title">Projects</h2>
+/* SKILLS */
+.skills span{
+ display:inline-block;padding:10px 15px;margin:8px;
+ border-radius:20px;
+ background:rgba(0,245,255,0.2);
+ border:1px solid #00f5ff;
+ transition:.3s
+}
+.skills span:hover{transform:scale(1.1)}
 
-                <div class="work__container bd-grid">
-                    <!--=====1. saloon management =====-->
-                    <a href="https://github.com/Rajatkapoor01/Online-Saloon-Management-system" target="_blank" rel="noopener noreferrer" class="work__img" class="work__img">
-                        <img src="assets/img/SS/saloon management.png" alt="">
-                    </a>
-                    
-                    <!--=====2. bank churan =====-->
-                    <a href="https://github.com/Rajatkapoor01/YBI-FOUNDATION-Bank-Churn-Prediction-" target="_blank" rel="noopener noreferrer" class="work__img" class="work__img">
-                        <img src="assets/img/SS/Bank churan prediction.png" alt="">
-                    </a>
-                    <!--=====3. anonONE=====-->
-                    <a href="https://github.com/Rajatkapoor01/ANONONE" target="_blank" rel="noopener noreferrer" class="work__img" class="work__img">
-                        <img src="assets/img/SS/ANON-1.png" alt="">
-                    </a>
-                    <!--=====4. Heart Diseases Prediction =====-->
-                    <a href="https://github.com/Rajatkapoor01/Heart-Disease-Prediction" target="_blank" rel="noopener noreferrer" class="work__img" class="work__img">
-                        <img src="assets\img\SS\HEART DISEASES-2.webp" alt="">
-                    </a>
-                    <!--=====5. Covid 19 dashboard =====-->
-                    <a href="https://github.com/Rajatkapoor01/TABLEAU_COVID-Dashboard" target="_blank" rel="noopener noreferrer" class="work__img" class="work__img">
-                    |   <img scr="assets/img/SS/tableau.png" alt="">
-                    </a>
-                    <!--=====6. Fraud Transaction Prediction =====-->
-                    <a href="https://github.com/Rajatkapoor01/CodeClause__Fraud-Transaction-Prediction" target="_blank" rel="noopener noreferrer" class="work__img" class="work__img">
-                        <img src="assets/img/SS/FRAUD TRANCSACTION PREDICTION.jpg" alt="">
-                    </a>
-                    <!--=====7. Quote of the Day =====-->
-                    <a href="https://github.com/Rajatkapoor01/CODESOFT-QuoteOfDay" target="_blank" rel="noopener noreferrer" class="work__img" class="work__img">
-                        <img src="assets/img/SS/Quote of day-1.jpg" alt="">
-                    </a>
-                    <!-- 7.b ToDo Appliction-->
-                    <a href="https://github.com/Rajatkapoor01/CODESOFT-ToDo-App" target="_blank" rel="noopener noreferrer" class="work__img" class="work__img">
-                        <img src="assets\img\SS\TO-do aap.jpg" alt="">
-                    
-                    <!--=====8. Movie Recommendation System =====-->
-                    <a href="https://github.com/Rajatkapoor01/Movie-Recommendation-system" target="_blank" rel="noopener noreferrer" class="work__img">
-                        <img src="assets/img/SS/Movie recommend system.jpg" alt="">
-                    </a>
-                    <!--=====9. IPL SCORE PREDICTION =====-->
-                    <a href="#" target="_blank" rel="noopener noreferrer" class="work__img" class="work__img">
-                        <img src="assets\img\SS\IPL score Prediciton.png" alt="">
-                    <!--=====10. assets\img\SS\SS_PLANT.png =====-->
-                    <a href="#" target="_blank" rel="noopener noreferrer" class="work__img" class="work__img">
-                        <img src="assets\img\SS\SS_PLANT.png" alt="">
-                    <!--=====11.student grade prediction =====-->
-                    <a href="#" target="_blank" rel="noopener noreferrer" class="work__img" class="work__img">
-                        <img src="assets\img\SS\Student grade prediction.jpg" alt="">
-                    <!--=====12.  =====-->
+/* TITLE */
+h2{
+ font-size:32px;margin-bottom:20px;
+ border-left:5px solid #00f5ff;
+ padding-left:10px
+}
 
-                </div>
-            </section>
+footer{text-align:center;padding:30px;background:#020617}
+</style>
+</head>
 
-            <!--===== SKILLS =====-->
-            <section class="skills section" id="skills">
-                <h2 class="section-title">Skills</h2>
-            
-                <div class="skills__container bd-grid">
-                    <!-- First Row for Categories -->
-                    <div class="skills__row">
-                        <div class="skills__data">
-                            <i class='fab fa-python skills__icon'></i>
-                            <span class="skills__name">Python</span>
-                        </div>
-                        <div class="skills__data">
-                            <i class='bx bxs-brain skills__icon'></i>
-                            <span class="skills__name">Machine Learning</span>
-                        </div>
-                        <div class="skills__data">
-                            <i class='bx bxs-chip skills__icon'></i>
-                            <span class="skills__name">Deep Learning</span>
-                        </div>
-                        <div class="skills__data">
-                            <i class='bx bxs-chat skills__icon'></i>
-                            <span class="skills__name">NLP</span>
-                        </div>
-                        <div class="skills__data">
-                            <i class='fas fa-cogs skills__icon'></i>
-                            <span class="skills__name">Large Language Models</span>
-                        </div>
-                        <div class="skills__data">
-                            <i class='fas fa-chart-line skills__icon'></i>
-                            <span class="skills__name">Data Science</span>
-                        </div>
-                    </div>
+<body>
 
-                <div class="skills__container bd-grid">
-                    <!-- Second Row for Categories -->
-                    <div class="skills__row">
-                        <div class="skills__data">
-                            <i class="fas fa-robot skills__icon"></i>
-                            <span class="skills__name">Generative AI</span>
-                        </div>
-                        <div class="skills__data">
-                            <i class='fas fa-chart-pie skills__icon'></i>
-                            <span class="skills__name">Data Analytics</span>
-                        </div>
-                        <div class="skills__data">
-                            <i class='fas fa-file-alt skills__icon'></i>
-                            <span class="skills__name">Data Collection</span>
-                        </div>
-                        <div class="skills__data">
-                            <i class='fas fa-filter skills__icon'></i>
-                            <span class="skills__name">Feature Engineering</span>
-                        </div>
-                        <div class="skills__data">
-                            <i class='fas fa-database skills__icon'></i>
-                            <span class="skills__name">SQL</span>
-                        </div>
-                        <div class="skills__data">
-                            <i class='fas fa-chart-bar skills__icon'></i>
-                            <span class="skills__name">Tableau</span>
-                        </div>
-                        <div class="skills__data">
-                            <i class='bx bxl-microsoft skills__icon'></i>
-                            <span class="skills__name">Power BI</span>
-                        </div>
-                        
-                    </div>
-                </div>
+<div class="cursor"></div>
 
-                <div class="skills__container bd-grid">
-                    <!-- Third Row for Categories -->
-                    <div class="skills__row">
-                
-                        <div class="skills__data">
-                            <i class='fas fa-cloud skills__icon'></i>
-                            <span class="skills__name">Azure ML Studio</span>
-                        </div>
-                        <div class="skills__data">
-                            <i class='fas fa-robot skills__icon'></i>
-                            <span class="skills__name">Auto ML</span>
-                        </div>
-                        <div class="skills__data">
-                            <i class='fab fa-aws skills__icon'></i>
-                            <span class="skills__name">Amazon Web Service</span>
-                        </div>
-                        <div class="skills__data">
-                            <i class='fab fa-google skills__icon'></i>
-                            <span class="skills__name">Google Cloud Platform</span>
-                        </div>
-                    </div>
+<header>
+<h2>Rajat Kapoor</h2>
+<div>
+<a href="#home">Home</a>
+<a href="#projects">Projects</a>
+<a href="#skills">Skills</a>
+<a href="#contact">Contact</a>
+</div>
+</header>
 
-                    <div class="skills__container bd-grid">
-                        <!-- Fourth Row for Categories -->
-                        <div class="skills__row">
+<section class="home" id="home">
+<div>
+<h1>Building ML systems that <span>reduce fraud & improve retention</span></h1>
+<p>Data Scientist | ML Engineer</p>
+<a href="#" class="btn">Download CV</a>
+</div>
+<img src="https://via.placeholder.com/300" style="border-radius:50%">
+</section>
 
-                            <div class="skills__data">
-                                <i class='fas fa-file-code skills__icon'></i>
-                                <span class="skills__name">Visual Studio Code</span>
-                            </div>
-                            <div class="skills__data">
-                                <i class='fas fa-leaf skills__icon'></i>
-                                <span class="skills__name">Anaconda</span>
-                            </div>
-                            <div class="skills__data">
-                                <i class='fas fa-book skills__icon'></i>
-                                <span class="skills__name">Google Colab</span>
-                            </div>
-                            <div class="skills__data">
-                                <i class='fas fa-code-branch skills__icon'></i>
-                                <span class="skills__name">Jupyter Notebook</span>
-                            </div>
-                        </div>
-                        
-                        
+<section id="projects">
+<h2>Projects (Proof of Work)</h2>
 
-            </section>
-            
-            <!-- Download CV Button Before Footer -->
-            <div class="cv-button-container">
-                <a href="Rajat01kapoor.pdf" download class="button">Download CV</a>
-            </div>
+<div class="grid">
 
-        </main>
+<div class="card project">
+<h3>Fraud Detection System</h3>
+<p><strong>Problem:</strong> Increasing fraud transactions.</p>
+<p><strong>Solution:</strong> Built ML classification model.</p>
+<p><strong>Impact:</strong> Improved fraud detection accuracy.</p>
+<div class="tags"><span>Python</span><span>ML</span></div>
+<br>
+<a href="https://github.com" class="btn">View Code</a>
+</div>
 
-        <!--===== FOOTER =====-->
-        <footer class="footer" id="footer">
-            <h2 class="footer__title">Get In Touch</h2>
-            
-            <div class="footer__social">
-                <!-- Name -->
-                <p><strong>Name:</strong> RAJAT KAPOOR</p>
-                
-                <!-- Contact Number -->
-                <p><strong>Phone:</strong> <a href="tel:+91 9459485370" class="footer__link"> +91(94594#####)</a></p>
-                
-                <!-- Email -->
-                <p><strong>Email:</strong> <a href="mailto:rajat01kapoor@gmail.com" class="footer__link"> rajat01kapoor@gmail.com</a></p>
-                
-                <!-- Address -->
-                <p><strong>Address:</strong> Himachal Pradesh, INDIA</p>
-            </div>
+<div class="card project">
+<h3>Movie Recommendation</h3>
+<p><strong>Problem:</strong> Low user engagement.</p>
+<p><strong>Solution:</strong> NLP-based recommender.</p>
+<p><strong>Impact:</strong> Better personalization.</p>
+<div class="tags"><span>NLP</span></div>
+<br>
+<a href="https://github.com" class="btn">View Code</a>
+</div>
 
-            <div class="footer__social-icons">
-                <a href="https://www.linkedin.com/in/rajat-kapoor-732042289" class="footer__icon"><i class='bx bxl-linkedin'></i></a>
-                <a href="https://github.com/Rajatkapoor01" class="footer__icon"><i class='bx bxl-github'></i></a>
-            </div>
-        </footer>
+<div class="card project">
+<h3>Bank Churn Prediction</h3>
+<p><strong>Problem:</strong> Customer churn.</p>
+<p><strong>Solution:</strong> Predictive ML model.</p>
+<p><strong>Impact:</strong> Improved retention strategy.</p>
+<div class="tags"><span>Analytics</span></div>
+<br>
+<a href="https://github.com" class="btn">View Code</a>
+</div>
 
-        <!--===== SCROLL REVEAL =====-->
-        <script src="https://unpkg.com/scrollreveal"></script>
+</div>
+</section>
 
-        <!--===== MAIN JS =====-->
-        <script src="assets/js/main.js"></script>
-    </body>
+<section id="skills">
+<h2>Skills</h2>
+<div class="skills">
+<span>Python</span>
+<span>Machine Learning</span>
+<span>Deep Learning</span>
+<span>NLP</span>
+<span>SQL</span>
+</div>
+</section>
+
+<section id="contact">
+<h2>Contact</h2>
+<p>Email: rajat01kapoor@gmail.com</p>
+</section>
+
+<footer>
+<p>© 2026 Rajat Kapoor</p>
+</footer>
+
+<script>
+// CURSOR EFFECT
+const cursor = document.querySelector('.cursor');
+document.addEventListener('mousemove', e=>{
+ cursor.style.top = e.clientY + 'px';
+ cursor.style.left = e.clientX + 'px';
+});
+
+// CURSOR EXPAND ON HOVER
+document.querySelectorAll('a, .card').forEach(el=>{
+ el.addEventListener('mouseenter', ()=>{
+  cursor.style.transform='scale(2)';
+ });
+ el.addEventListener('mouseleave', ()=>{
+  cursor.style.transform='scale(1)';
+ });
+});
+
+// SCROLL ANIMATION
+const elements = document.querySelectorAll('section, .card');
+
+const observer = new IntersectionObserver(entries=>{
+ entries.forEach(entry=>{
+  if(entry.isIntersecting){
+   entry.target.style.opacity=1;
+   entry.target.style.transform='translateY(0)';
+  }
+ });
+});
+
+elements.forEach(el=>{
+ el.style.opacity=0;
+ el.style.transform='translateY(50px)';
+ el.style.transition='0.8s';
+ observer.observe(el);
+});
+</script>
+
+</body>
 </html>
